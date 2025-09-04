@@ -1,0 +1,134 @@
+.pageContainer {
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+  }
+  
+  .title h2 {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    font-family: 'Bauhaus 93', sans-serif;
+    word-spacing: 1px;
+  }
+  
+  .eyeScale {
+    transform: scale(0.6);
+  }
+  
+  .emptyCart {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .emptyCart h2 {
+    margin-left: 40px;
+    font-size: 5rem;
+  }
+  
+  /* Table card */
+  .cartCard {
+    margin-top: 50px;
+    padding: 25px 20px;
+    border-radius: 20px;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.4s;
+  }
+  
+  .cartCard:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  .tableResponsive {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .cartTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .cartTable thead tr {
+    border-radius: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .cartTable th,
+  .cartTable td {
+    padding: 12px 15px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .cartTable tbody tr {
+    background: var(--bgColor);
+    transition: 0.3s;
+    border-radius: 15px;
+    cursor: default;
+  }
+  
+  .cartTable tbody tr:hover {
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+  }
+  
+  .removeBtn {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .removeBtn:hover {
+    transform: scale(1.2);
+  }
+  
+  .removeBtn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  /* Checkout card */
+  .checkoutCard {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .checkoutButton {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .checkoutButton:hover {
+    transform: scale(1.05);
+  }
+  

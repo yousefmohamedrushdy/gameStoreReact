@@ -1,0 +1,172 @@
+.header {
+  width: 100%;
+  height: 70px;
+  background: var(--bgColor);
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.userItems {
+  gap: 15px;
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+  background: var(--bgColor);
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.1),
+              3px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+  color: #fff;
+  width: 3.4rem;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.badge {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  background: var(--secondary-color);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bgColor);
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 14px;
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.1),
+              3px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.profileButton:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userText {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.viewProfile {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+}
+.title {
+  text-decoration: none !important;
+  
+}
+@media (max-width: 992px) {
+  .menu {
+    display: block; 
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+.signInLink {
+  text-decoration: none;
+  background: var(--bgColor);
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.1),
+              3px 3px 7px rgba(0, 0, 0, 0.35);
+  transition:  0.3s ease;
+}
+.signInLink:hover{
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .userText {
+    display: none !important; /* hide name/details */
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    padding: 8px;
+    width: 3rem;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+  }
+
+  .profileButton {
+    padding: 4px 8px;
+  }
+  .title {
+    transform: scale(.8);
+
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .avatar {
+    width: 30px;
+    height: 30px;
+  
+  }
+
+  .icon {
+    font-size: 1rem;
+    padding: 6px;
+    width: 2.8rem;
+  }
+
+  .title {
+    font-size: 0.5rem;
+    transform: scale(.5);
+
+  }
+}

@@ -1,0 +1,7 @@
+.rating{
+    font-size: 1.3rem;
+    color:var(--secondary-color); 
+}
+.rating i{
+    margin-left: 2px;
+}

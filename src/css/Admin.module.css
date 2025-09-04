@@ -1,0 +1,257 @@
+.container {
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background: var(--bgColor);
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+  
+  .welcome {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: var(--primary-color);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.05), 0 4px 20px rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,255,255,0.2), 0 8px 30px rgba(255,255,255,0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    height: 140px;
+  }
+  
+  .cardActions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cardAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px dashed var(--secondary-color);
+    border-radius: 15px;
+    background: var(--primary-color);
+    box-shadow: 0 0 15px rgba(255,255,255,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: var(--secondary-color);
+  }
+  
+  .cardAdd:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  
+  .btnEdit {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+  
+  .btnDelete {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .unauthorized {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ff4d4f;
+    font-family: Arial, sans-serif;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+  }
+  
+  .modal {
+    background-color: var(--primary-color);
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.1), 0 8px 30px rgba(255,255,255,0.05);
+  }
+  
+  .modalForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    background: #192938;
+    color: #fff;
+  }
+  
+  textarea.input {
+    grid-column: span 2;
+    height: 60px;
+    resize: none;
+  }
+  
+  .modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .cardGrid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  
+    .modal {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .modalForm {
+      grid-template-columns: 1fr;
+    }
+  
+    textarea.input {
+      grid-column: span 1;
+    }
+  }
+  .modalForm label {
+    display: block;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+/* Labels above inputs */
+.modalForm label {
+    display: block;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Inputs and textareas */
+  .modalForm input,
+  .modalForm select,
+  .modalForm textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    width: 100%;
+    background: #192938;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  
+  .modalForm input:focus,
+  .modalForm select:focus,
+  .modalForm textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(9, 152, 168, 0.5);
+  }
+  
+  /* Textareas span full width */
+  textarea.input {
+    grid-column: span 2;
+    height: 60px;
+    resize: none;
+  }
+  
+  /* Compact row layout for certain inputs */
+  .modalForm .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .modalForm .row input,
+  .modalForm .row select {
+    flex: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .modalForm {
+      grid-template-columns: 1fr !important;
+    }
+    textarea.input {
+      grid-column: span 1;
+    }
+    .modalForm .row {
+      flex-direction: column;
+    }
+  }
+    

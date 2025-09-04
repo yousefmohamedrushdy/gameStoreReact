@@ -1,0 +1,289 @@
+.swiper {
+  width: 90%;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  width: 600px;
+  height: 350px;
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(20px);
+  bottom: 0 !important;
+  transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.game-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.game-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  transition:  0.5s ease;
+}
+
+.game-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.game-slide .content {
+  position: absolute;
+  bottom: 20px;
+  z-index: 1000;
+  width: 60%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.9;
+}
+
+.game-slide .content h2 {
+  font-family: "Bauhaus 93";
+  font-size: 3rem;
+  transition: font-size 0.3s ease, transform 0.5s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.game-slide .content p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  transition: font-size 0.3s ease;
+}
+
+.game-slide .content .buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-slide .content .buttons button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.game-slide .content .buttons .orderBtn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4ab4d3, #56e0c1);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.game-slide .content .buttons .orderBtn:hover {
+  background: linear-gradient(135deg, #56e0c1, #4ab4d3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-slide .content .buttons .orderBtn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-slide .content .buttons .playBtn {
+  height: 50px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.game-slide .content .buttons .playBtn:hover {
+  background: rgba(78, 77, 77, 0.2);
+  transform: scale(1.1);
+}
+
+.playBtn span.play {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.playBtn span.pause {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .play {
+  display: none;
+  opacity: 0;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .pause {
+  display: block;
+  opacity: 1;
+}
+
+.swiper-slide-active .game-slide {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.swiper-slide .video iframe {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 85%;
+  height: 75%;
+  border:4px solid transparent;
+  border-radius: 0 30px 0 30px !important  ;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+              5px 5px 15px rgba(0, 0, 0, 0.35);
+  background: var(--secondary-color);
+  z-index: 1100;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  transform-origin: top right;
+
+}
+.swiper-slide.swiper-slide-active .video.active iframe {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: 80%;
+    height: 300px;
+  }
+
+  .game-slide .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .game-slide .content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90%;
+    height: 250px;
+  }
+
+  .game-slide .content h2 {
+    font-size: 2rem;
+  }
+
+  .game-slide .content p {
+    font-size: 0.7rem;
+  }
+
+  .game-slide .content {
+    width: 80%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 40px;
+    width: 40px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 1.2rem;
+  }
+
+  .game-slide .content .buttons .playBtn {
+    height: 40px;
+    width: 40px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 100%;
+    height: 200px;
+  }
+
+  .game-slide .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .game-slide .content p {
+    font-size: 0.6rem;
+  }
+
+  .game-slide .content {
+    width: 90%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 35px;
+    width: 35px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 1rem;
+  }
+
+  .game-slide .content .buttons .playBtn {
+    height: 35px;
+    width: 35px;
+    font-size: 1.5rem;
+  }
+}

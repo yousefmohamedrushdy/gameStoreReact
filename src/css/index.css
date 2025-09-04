@@ -1,0 +1,57 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0d171f;
+  --secondary-color: #0998a8;
+  --bgColor: #192938;
+}
+
+h1, h2, h3, h4, p, a, div {
+  color: #ffffff;
+}
+
+body {
+  background-color: var(--bgColor);
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  border-radius: 30px;
+  background: var(--bgColor);
+
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.35);
+
+  overflow-y: auto;   
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+display: none;}
+
+
+.page-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

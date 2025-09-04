@@ -1,0 +1,140 @@
+.profileSidebar {
+  position: relative;
+  z-index: 5000 !important;
+  width: 100% !important;
+  max-width: 380px !important;
+  background: linear-gradient(135deg, #1f2937, #111827) !important;
+  color: #ffffff !important;
+  border-radius: 15px 0 0 15px !important;
+  font-family: 'Roboto', sans-serif !important;
+  overflow-y: auto !important;
+  padding-bottom: 20px !important;
+  transition: all 0.3s ease !important;
+}
+
+
+
+.closeBtn {
+  color: #fff !important;
+  font-size: 1.5rem !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-decoration: none !important;
+
+}
+
+.profileContent {
+  text-align: left !important;
+  padding: 20px 15px !important;
+}
+
+.avatar {
+  border: 3px solid #4ade80 !important;
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  transition: all 0.2s ease !important;
+}
+
+.editableInput {
+  background-color: #1f2937 !important;
+  color: #fff !important;
+  border: 1px solid #4ade80 !important;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+  transition: border 0.2s, background-color 0.2s !important;
+}
+
+.editableInput:focus {
+  border-color: #22c55e !important;
+  background-color: #111827 !important;
+  outline: none !important;
+}
+
+.disabledInput {
+  background-color: #2b303e !important;
+  color: #ccc !important;
+  border: 1px solid #444 !important;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+}
+
+.errorText {
+  color: #f87171 !important;
+  font-size: 0.8rem !important;
+  margin-top: 2px !important;
+  display: block !important;
+}
+
+.btn {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  padding: 8px 12px !important;
+  transition: transform 0.2s, opacity 0.2s !important;
+  margin-bottom: 5px !important;
+}
+
+.btn:hover {
+  transform: translateY(-2px) !important;
+  opacity: 0.9 !important;
+}
+
+
+
+.adminBtn {
+  background: linear-gradient(45deg, #17073a, #1d026d) !important;
+  color: #fff !important;
+  border: none !important;  
+}
+
+.fileInput {
+  color: #fff !important;
+  background: #1f2937 !important;
+  border: 1px solid #4ade80 !important;
+  border-radius: 6px !important;
+  padding: 5px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  margin-top: 5px !important;
+  font-size: 0.9rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profileSidebar {
+    max-width: 100% !important;
+    border-radius: 0 !important;
+  }
+  .avatar {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .editableInput, .disabledInput {
+    padding: 5px 8px !important;
+    font-size: 0.9rem !important;
+  }
+  .btn {
+    padding: 6px 10px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .btn {
+    padding: 5px 8px !important;
+    font-size: 0.85rem !important;
+  }
+  .fileInput {
+    font-size: 0.85rem !important;
+  }
+}

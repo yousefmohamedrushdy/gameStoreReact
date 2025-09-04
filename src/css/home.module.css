@@ -1,0 +1,27 @@
+
+.home {
+    overflow-y: visible;
+    width: 100%;
+    transition: ease-in-out 1s;
+    transform-origin: bottom;
+    height: auto;
+    padding:30px 0 ;
+  }
+  
+  .home::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sectionTitle{
+    text-transform: uppercase;
+  }
+.viewMore{
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: .4s;
+    transform-origin: center;  
+}
+.viewMore:hover{
+    color:var(--secondary-color);
+}
+
