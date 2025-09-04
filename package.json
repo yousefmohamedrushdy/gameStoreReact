@@ -4,6 +4,11 @@
   "version": "0.0.0",
   "homepage": ".",
   "type": "module",
+  "engines": {
+    "node": ">=18 <21",
+    "npm": ">=9 <11",
+    "yarn": ">=1.22.19 <2.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
